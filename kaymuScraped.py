@@ -38,8 +38,8 @@ def createCSV(pageNumber,all_brands,phone_desc,prices):
 
     df = pd.DataFrame(all_phones,columns = ['Brand','Description','Price'])
     if(pageNumber==1):
-        df.to_csv('kaymu.csv')
+        df.to_csv('kaymu.csv',index = False)
     else:
-        df.to_csv('kaymu.csv',mode = 'a',header = False)
+        df.to_csv('kaymu.csv',mode = 'a',header = False,index = False)
 
 scrapeSite()
